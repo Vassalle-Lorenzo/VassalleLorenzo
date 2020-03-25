@@ -11,7 +11,8 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
   }
-
+username: string;
+password: string;
   eseguiLogin() {
     if ('username' == null){
       alert("Errore: inserire un Username!")
