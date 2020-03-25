@@ -20,6 +20,10 @@ const appRoutes: Routes = [
 
   {path: 'edit-game', component: ModificaGiochiComponent },
 
+  {path: 'login', component: LoginComponent },
+
+  {path: '', redirectTo: '/login', pathMatch:'full'},
+
 ];
 
 @NgModule({

@@ -1,5 +1,10 @@
-<p>
-<li>COD</li>
-<li>WWZ</li>
-<li>Fifa 20</li>
-</p>
+<section>
+    <div class="grid" *ngFor="let gioco of listaGiochi">
+        <div class="title">
+            <span>{{gioco.nome}}</span>
+        </div>
+        <div class="image">
+            <img [src]="'/../../assets/images/'+gioco.immagine+'.jpg'" alt="image">
+        </div>
+    </div>
+</section>
