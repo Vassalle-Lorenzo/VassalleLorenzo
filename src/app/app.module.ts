@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -9,6 +10,7 @@ import { ModificaGiochiComponent } from './components/modifica-giochi/modifica-g
 import { RouterModule, Routes } from '@angular/router';
 import { MenuComponent } from './components/menu/menu.component';
 import { LoginComponent } from './components/login/login.component';
+
 
 const appRoutes: Routes = [
 
@@ -37,6 +39,7 @@ const appRoutes: Routes = [
     LoginComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     RouterModule.forRoot(​
       appRoutes,​

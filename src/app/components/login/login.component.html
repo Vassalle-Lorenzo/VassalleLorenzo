@@ -1,3 +1,4 @@
+<!--
 <div>
   <label>Username:</label>
   <input type="text" name="username" id="username"/>
@@ -9,3 +10,33 @@
 <div>
   <button (click)="eseguiLogin()">Login</button>
 </div>
+-->
+
+
+
+<form>​   <!--ngSubmit-->
+
+  <div class="form-group">​
+
+    <label for="username">Username : </label>​
+
+    <input [(ngModel)]="username" name="username" placeholder="inserisci username" type="text" class="form-control" id="username" required>​
+
+  </div>​
+
+  <div class="form-group">​
+
+    <label for="password">Password : </label>​
+
+    <input [(ngModel)]="password" name="password" placeholder="inserisci password" type="text" class="form-control" id="password" required>​
+
+  </div>​
+
+  <button type="submit" class="btn btn-success">Submit</button>​
+
+</form>
+
+
+
+
+
