@@ -1,26 +1,12 @@
-<!--
-<div>
-  <label>Username:</label>
-  <input type="text" name="username" id="username"/>
-</div>
-<div>
-  <label>Password:</label>
-  <input type="password" name="password" id="password"/>
-</div>
-<div>
-  <button (click)="eseguiLogin()">Login</button>
-</div>
--->
-
-
-
-<form>​   <!--ngSubmit-->
+<form (ngSubmit)="login()" #myForm=ngForm>​  
 
   <div class="form-group">​
 
     <label for="username">Username : </label>​
 
-    <input [(ngModel)]="username" name="username" placeholder="inserisci username" type="text" class="form-control" id="username" required>​
+    <input type="text" class="form-control" id="username" required [(ngModel)]="username" name="user" #usernameVar="ngModel" placeholder="inserisci username" >​
+
+    <div [hidden]="usernameVar.valid || usernameVar.pristine" class="alert alert-danger">Username is required</div>​
 
   </div>​
 
@@ -28,11 +14,13 @@
 
     <label for="password">Password : </label>​
 
-    <input [(ngModel)]="password" name="password" placeholder="inserisci password" type="text" class="form-control" id="password" required>​
+    <input  type="text" class="form-control" id="password" required [(ngModel)]="password" name="pass" #passwordVar="ngModel" placeholder="inserisci password">​
+
+    <div [hidden]="passwordVar.valid || passwordVar.pristine" class="alert alert-danger">Password is required</div>​
 
   </div>​
 
-  <button type="submit" class="btn btn-success">Submit</button>​
+  <button [disabled]="myForm.form.invalid"  type="submit" class="btn btn-success">Submit</button>​
 
 </form>
 
